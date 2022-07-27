@@ -34,9 +34,6 @@ const object2 = {
 // Destructuring Arrays in JavaScript
 // **********************************
 
-//Destructuring in Arrays
-// ********************************
-
 //How to assign variables with destructuring
 const colors = ['violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red'];
 
@@ -62,3 +59,26 @@ console.log(food); //["pizza", "tortillas"]
 [food[0], food[1]] = [food[1], food[0]];
 
 console.log(food); //["tortillas", "pizza"];
+
+// **********************************
+// Destructuring Objects in JavaScript
+// **********************************
+
+const courses = {
+  frontEnd: 'React',
+  backEnd: 'Node',
+  database: 'MongoDB',
+};
+
+//using the property names as variables
+const { frontEnd, backEnd, database } = courses;
+
+console.log(
+  `I use ${frontEnd} as frontend, ${backEnd} as backend and ${database} for data.`
+);
+//I use React as frontend, Node as backend and MongoDB for data.
+
+//Using new variable names instead of property names
+const { frontEnd: front, backEnd: back } = courses;
+console.log(front); //React
+console.log(back); //Node
